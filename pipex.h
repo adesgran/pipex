@@ -24,5 +24,6 @@ typedef struct	s_data
 
 int		set_pipefd(t_cmd *cmd);
 void	close_pipes(t_cmd *cmd);
+int		exec_cmd(t_data *data);
 
 #endif
