@@ -22,6 +22,7 @@ typedef struct	s_data
 	char	**envp;
 }	t_data;
 
+void	pipex(t_data *data);
 int		set_pipefd(t_cmd *cmd);
 void	close_pipes(t_cmd *cmd);
 int		exec_cmd(t_data *data);
