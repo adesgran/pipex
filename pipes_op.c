@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:33:26 by adesgran          #+#    #+#             */
-/*   Updated: 2022/05/10 16:37:52 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:21:48 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ int	set_pipefd(t_cmd *cmd)
 			if (cmd->next->fd_infile == -2)
 				cmd->fd_infile = pipefd[0];
 		}
-		if (!cmd->next && cmd->outfile == -2)
-			cmd->outfile = 1;
+		if (!cmd->next && cmd->fd_outfile == -2)
+			cmd->fd_outfile = 1;
 		cmd = cmd->next;
 	}
 	return (0);
