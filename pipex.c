@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:29:46 by adesgran          #+#    #+#             */
-/*   Updated: 2022/05/10 17:05:33 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:38:33 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	pipex(t_data *data)
 {
+	int	status;
+
 	exec_cmd(data);
+	status = 0;
+	wait(&status);
 }
