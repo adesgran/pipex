@@ -2,6 +2,8 @@
 pipex
 *.swp
 libft
+infile
+outfile
 
 # C
 *.o
