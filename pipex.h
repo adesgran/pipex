@@ -19,6 +19,10 @@ typedef struct	s_cmd
 typedef struct	s_data
 {
 	t_cmd	*cmd;
+	char	**envp;
 }	t_data;
+
+int	set_pipefd(t_cmd *cmd);
+void	close_pipes(t_cmd *cmd);
 
 #endif
