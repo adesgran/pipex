@@ -1,4 +1,4 @@
-NAME = Pipex
+NAME = pipex
 
 CC = gcc
 C_FLAGS = -Wall -Wextra -Werror
