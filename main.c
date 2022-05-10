@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:10:45 by adesgran          #+#    #+#             */
-/*   Updated: 2022/05/10 17:16:59 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:23:50 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,12 @@ t_cmd	*initcmd(char **cmd, char *bin_path, int fd_inf, int fd_outf)
 t_data	*initdata(char **envp)
 {
 	t_data	*res;
-	t_cmd	*cmd;
-	char	cmd1[2][20];
+	char	**cmd1;
 
 	res = malloc(sizeof(t_data));
 	res->envp = envp;
-	cmd1[1] = NULL;
-	cmd1[0] = NULL;
+	cmd1 = malloc(sizeof(char *));
+	*cmd1 = NULL;
 	res->cmd = initcmd(cmd1, "/bin/cat", 0, 1);
 	
 	return (res);
