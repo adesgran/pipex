@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:43:38 by adesgran          #+#    #+#             */
-/*   Updated: 2022/05/10 17:42:20 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:54:29 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,13 @@ int	exec_cmd(t_data *data, t_cmd *cmd)
 		return (perror("Fork"), 1);
 	if (!pid)
 	{
-		dup2(cmd->fd_infile, STDIN_FILENO); 
+		dup2(cmd->fd_infile, STDIN_FILENO);
 		if (cmd->fd_infile > 2)
 			close(cmd->fd_infile);
-		dup2(cmd->fd_outfile, STDOUT_FILENO); 
+		dup2(cmd->fd_outfile, STDOUT_FILENO);
 		if (cmd->fd_outfile > 2)
 			close(cmd->fd_outfile);
 		execve(cmd->bin_path, cmd->cmd, data->envp);
 	}
 	return (pid);
 }
-

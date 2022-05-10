@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pipex.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/10 17:53:11 by adesgran          #+#    #+#             */
+/*   Updated: 2022/05/10 17:53:55 by adesgran         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PIPEX_H
 # define PIPEX_H
 
@@ -8,7 +20,7 @@
 # include <fcntl.h>
 # include <sys/wait.h>
 
-typedef struct	s_cmd
+typedef struct s_cmd
 {
 	char			**cmd;
 	char			*bin_path;
@@ -17,7 +29,7 @@ typedef struct	s_cmd
 	struct s_cmd	*next;
 }	t_cmd;
 
-typedef struct	s_data
+typedef struct s_data
 {
 	t_cmd	*cmd;
 	char	**envp;
