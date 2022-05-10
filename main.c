@@ -6,14 +6,16 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 15:10:45 by adesgran          #+#    #+#             */
-/*   Updated: 2022/05/10 15:10:45 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/05/10 15:37:09 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <pipex.h>
 
-int	main(int ac, char **av)
+int	main(int ac, char **av, char **envp)
 {
+	execve(av[1], av + 1, envp);
+
 	(void)ac;
 	(void)av;
 	return (0);
