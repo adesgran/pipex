@@ -1,0 +1,7 @@
+# Perso
+pipex
+*.swp
+libft
+
+# C
+*.o
