@@ -5,6 +5,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <libft.h>
+# include <fcntl.h>
 
 typedef struct	s_cmd
 {
