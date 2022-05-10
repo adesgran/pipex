@@ -6,18 +6,16 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:43:38 by adesgran          #+#    #+#             */
-/*   Updated: 2022/05/10 17:20:37 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:42:20 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <pipex.h>
 
-int	exec_cmd(t_data *data)
+int	exec_cmd(t_data *data, t_cmd *cmd)
 {
 	pid_t	pid;
-	t_cmd	*cmd;
 
-	cmd = data->cmd;
 	pid = fork();
 	if (pid == -1)
 		return (perror("Fork"), 1);
