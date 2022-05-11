@@ -6,7 +6,7 @@
 /*   By: adesgran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:53:11 by adesgran          #+#    #+#             */
-/*   Updated: 2022/05/10 17:53:55 by adesgran         ###   ########.fr       */
+/*   Updated: 2022/05/11 14:30:58 by adesgran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ typedef struct s_data
 }	t_data;
 
 void	pipex(t_data *data);
-int		set_pipefd(t_cmd *cmd);
 void	close_pipes(t_cmd *cmd);
-int		exec_cmd(t_data *data, t_cmd *cmd);
 
 #endif
